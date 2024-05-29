@@ -1,0 +1,70 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define int long long
+#define pb push_back
+#define vr(a,b) vector<a>b
+#define el endl
+#define pyes cout<<"YES"<<el
+#define pno cout<<"NO"<<el
+#define fo(i,a, b) for (int i = a; i < b; i++)
+#define all(v) begin(v),end(v)
+const int MOD = (1e9) + 7;
+const int INF = INT_MAX;
+const int INM = INT_MIN;
+#define fastio ios::sync_with_stdio(false); cin.tie(0);
+ 
+signed main()
+{
+    fastio;
+    cin.tie(NULL);
+    int t;
+    cin>>t;
+    
+    while(t--)
+    {
+        int n,k;
+        cin>>n>>k;
+        vr (int,v(n));
+        for(int &i:v)
+        {
+            cin>>i;
+        }
+        sort(all(v));
+        int count=1;
+        int mim=-1;
+        fo(i,0,n-1)
+        {
+            if(abs(v[i]-v[i+1])<=k)
+            {
+                count++;
+            }
+            else{
+                mim=max({mim,count});
+                count=1;
+            }
+        }
+        mim=max({mim,count});
+       // cout<<mim;
+       cout<<n-mim<<el;
+        // if(mim==-1)
+        // {
+        //     cout<<n-count<<el;
+        // }
+        // else{
+        //      cout<<n-mim<<el;
+        // }
+    
+        
+
+        
+    }
+}
+
+    
+
+    
+        
+    
+    
+
+    
