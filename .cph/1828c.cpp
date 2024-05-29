@@ -42,17 +42,7 @@ signed main()
         }
         sort(all(v2));
         int x=0;
-    //     fo(i,0,n)
-    //     {
-    //         if(v2[i]!=0)
-    //         {
-    //             x=v2[i];
-    //             break;
-    //         }
-    //     }
-    //    // cout<<x;
-    //    // cout<<0%2<<el;
-    //     bool flag=true;
+    
         fo(i,0,n)
         {
             x=__gcd(x,v2[i]);
@@ -60,8 +50,7 @@ signed main()
         cout<<x<<el;
         
         
-    }
-}
+    }}
 
     
 
